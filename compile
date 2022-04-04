@@ -13,7 +13,7 @@ case $1 in
 		fi
 		cc -c -Iinclude src/file-io.c $FLAGS
 #		cc -c -Iinclude src/net-io.c $FLAGS
-#		cc -Iinclude src/main.c *.o $FLAGS
+#		cc -Iinclude src/main.c *.o $FLAGS -o sxfiled
 		rm *.o
 		;;
 	install)
