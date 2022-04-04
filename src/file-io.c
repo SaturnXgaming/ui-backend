@@ -34,3 +34,22 @@ plarray_t* plListDir(char* path, plgc_t* gc){
 
 	return returnArray;
 }
+
+size_t plGetFileSize(char* path){
+	struct stat buf;
+
+	if(stat(path, &buf)){
+		perror("plGetFileSize");
+		return 1;
+	}
+
+	return buf.st_size;
+}
+
+int plDeletePath(char* path, bool recursive){
+	
+}
+
+int plOpenWith(char* path, char* command){
+	
+}
