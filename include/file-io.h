@@ -4,7 +4,9 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+plgc_t* rootGC = NULL;
+
 plarray_t* plListDir(char* path);
-size_t plGetFileSize(char* path);
+int plGetFileSize(char* path);
 int plDeletePath(char* path, bool recursive);
 int plOpenWith(char* path, char* program);
